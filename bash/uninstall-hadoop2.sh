@@ -1,6 +1,7 @@
 #!/bin/bash
 
-HADOOP_HOME=/opt/hadoop-2.0.5-alpha
+HADOOP_VERSION=2.0.5-alpha
+HADOOP_HOME="/opt/hadoop-${HADOOP_VERSION}"
 NN_DATA_DIR=/var/data/hadoop/hdfs/nn
 SNN_DATA_DIR=/var/data/hadoop/hdfs/snn
 DN_DATA_DIR=/var/data/hadoop/hdfs/dn
