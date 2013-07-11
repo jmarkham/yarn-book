@@ -63,7 +63,7 @@ process()
 
         if $refresh;
         then
-         echo "restart"
+         restart_hadoop
         fi 	
 }
 
