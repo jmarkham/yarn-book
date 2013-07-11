@@ -140,11 +140,7 @@ END
 
 write_file()
 {
-	local filename=$1
-	xmllint --format "$filename" > "$filename".pp
-	if $installed ; then
-        	mv "$filename".pp "$HADOOP_CONF_DIR/$filename"
-	else
-        	mv "$filename".pp "$filename"
-	fi
+	local file=$1
+
+	xmllint --format "$file" > "$file".pp && mv "$file".pp "$file"
 }
