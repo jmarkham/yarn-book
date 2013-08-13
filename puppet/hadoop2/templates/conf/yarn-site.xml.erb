@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<configuration>
+<property>
+  <name>yarn.nodemanager.aux-services</name>
+  <value>mapreduce.shuffle</value>
+</property>
+<property>
+  <name>yarn.nodemanager.aux-services.mapreduce.shuffle.class</name>
+  <value>org.apache.hadoop.mapred.ShuffleHandler</value>
+</property>
+<property>
+  <name>yarn.web-proxy.address</name>
+  <value><%= scope.lookupvar('hadoop::params::yarn_proxy') %>:<%= scope.lookupvar('hadoop::params::yarn_proxy_port') %></value>
+</property>
+<property>
+  <name>yarn.resourcemanager.scheduler.address</name>
+  <value><%= scope.lookupvar('hadoop::params::rm') %>:8030</value>
+</property>
+<property>
+  <name>yarn.resourcemanager.resource-tracker.address</name>
+  <value><%= scope.lookupvar('hadoop::params::rm') %>:8031</value>
+</property>
+<property>
+  <name>yarn.resourcemanager.address</name>
+  <value><%= scope.lookupvar('hadoop::params::rm') %>:8032</value>
+</property>
+<property>
+  <name>yarn.resourcemanager.admin.address</name>
+  <value><%= scope.lookupvar('hadoop::params::rm') %>:8033</value>
+</property>
+<property>
+  <name>yarn.resourcemanager.webapp.address</name>
+  <value><%= scope.lookupvar('hadoop::params::rm') %>:8088</value>
+</property>
+</configuration>

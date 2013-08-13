@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<configuration>
+<property>
+  <name>fs.default.name</name>
+  <value>hdfs://<%= scope.lookupvar('hadoop::params::nn') %>:9000</value>
+</property>
+<property>
+  <name>hadoop.http.staticuser.user</name>
+  <value><%= scope.lookupvar('hadoop::params::http_static_user') %></value>
+</property>
+</configuration>

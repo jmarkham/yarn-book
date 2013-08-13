@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+<property>
+  <name>mapreduce.framework.name</name>
+  <value>yarn</value>
+</property>
+<property>
+  <name>mapreduce.jobhistory.address</name>
+  <value><%= scope.lookupvar('hadoop::params::mr_hist') %>:10020</value>
+</property>
+<property>
+  <name>mapreduce.jobhistory.webapp.address</name>
+  <value><%= scope.lookupvar('hadoop::params::mr_hist') %>:19888</value>
+</property>
+<property>
+  <name>yarn.app.mapreduce.am.staging-dir</name>
+  <value>/mapred</value>
+</property>
+</configuration>

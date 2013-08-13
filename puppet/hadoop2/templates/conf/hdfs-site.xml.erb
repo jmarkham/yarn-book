@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<configuration>
+<property>
+  <name>dfs.namenode.name.dir</name>
+  <value><%= scope.lookupvar('hadoop::params::nn_data_dir') %></value>
+</property>
+<property>
+  <name>fs.checkpoint.dir</name>
+  <value><%= scope.lookupvar('hadoop::params::snn_data_dir') %></value>
+</property>
+<property>
+  <name>fs.checkpoint.edits.dir</name>
+  <value><%= scope.lookupvar('hadoop::params::snn_data_dir') %></value>
+</property>
+<property>
+  <name>dfs.datanode.data.dir</name>
+  <value><%= scope.lookupvar('hadoop::params::dn_data_dir') %></value>
+</property>
+<property>
+  <name>dfs.namenode.http-address</name>
+  <value><%= scope.lookupvar('hadoop::params::nn') %>:50070</value>
+</property>
+<property>
+  <name>dfs.namenode.secondary.http-address</name>
+  <value><%= scope.lookupvar('hadoop::params::nn') %>:50090</value>
+</property>
+</configuration>
