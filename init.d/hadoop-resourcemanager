@@ -28,7 +28,7 @@ source ${HADOOP_HOME}/etc/hadoop/hadoop-env.sh
 source ${HADOOP_HOME}/etc/hadoop/yarn-env.sh
 
 RETVAL=0
-PIDFILE="${YARN_PID_DIR}/hadoop-yarn-resourcemanager.pid"
+PIDFILE="${YARN_PID_DIR}/yarn-yarn-resourcemanager.pid"
 desc="Hadoop YARN ResourceManager daemon"
 
 start() {
